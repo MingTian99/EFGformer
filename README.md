@@ -7,7 +7,7 @@
 > **Abstract:** 
 In this paper, we propose an Efficient Frequency-Guided image deraining transformer, called EFGformer, to explore the more useful self-attention values from the frequency domain for better image deraining. Inspired by the traditional convolution theorem, we design frequency domain guidance attention (FDGA) to learn rich global and local dependencies. Firstly, we employ affine coupling to increase receptive fields implicitly, enabling the capturing of multi-scale spatial feature representations, and then they are transferred to the frequency domain using the Fourier transform. Instead of using vanilla attention, we adopt element-wise product to model global frequency information for better feature aggregation and reducing computational complexity. As traditional feed-forward networks struggle with frequency information, we introduce an adaptive frequency collaborative block (AFCB) to adaptively learn frequency information and integrate local spatial information for improved image restoration. Moreover, a scale feature enhancement block (SFEB) is designed to exchange and aggregate information at different scales for learning mixed features of various scales. Extensive experimental results on commonly used benchmark datasets demonstrate that our method outperforms competitive methods in terms of both performance and computational overhead. The source codes are available at https://github.com/MingTian99/EFGformer.
 
-![EFGformer](EFGformer.png)
+![EFGformer](figs/EFGformer.png)
 
 ## News
 
