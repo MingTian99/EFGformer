@@ -8,7 +8,7 @@
 The existing deraining methods have obtained noteworthy improvements, but it is a challenging problem to extend the methods for complicated rain conditions where rain streaks exhibit different distribution densities, sizes, shapes, etc. The main challenges are the ability to fully explore and utilize the multi-scale context information of rain streaks that maintain both global structure completeness and local detail accurateness. To this end, this paper proposes an Exploring Context-Gated Network, known as ECG-Net. To adequately explore the richer context information, the proposed method consists of two key elements: context-enhancedfeature block (CEFB) and multi-scale-gated aggregation block (MGAB). Specifically, the various scale features can be captured by CEFB with the multi-scale operation, to better remove the rain streaks and effectively restore the local de-
 tail textures. Subsequently, the captured features from different spaces are sent to MGAB, to aggregate and transmit these different scale features from the encoder to the decoder. Massive experiments on the commonly used benchmarks have demonstrated that the proposed method obtains more appealing performances against other competitive methods.The source codes are available athttps://github.com/MingTian99/EFGformer.
 
-![EFGformer](figs/arch.png)
+![EFGformer](EFGformer.png)
 
 ## News
 
