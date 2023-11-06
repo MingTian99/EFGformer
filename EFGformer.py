@@ -294,7 +294,7 @@ class fftformer(nn.Module):
         self.patch_embed = OverlapPatchEmbed(inp_channels, dim)
 
         self.encoder_level1 = nn.Sequential(*[
-            TransformerBlock(dim=dim, ffn_expansion_factor=ffn_expansion_factor, bias=bias, scale=scale[0]) for i in
+            TransformerBlock(dim=dim, ffn_expansion_factor=ffn_expansion_factor, bias=bias, scale=scale[0], att=True) for i in
             range(num_blocks[0])])
 
         self.down1_2 = Downsample(dim)
