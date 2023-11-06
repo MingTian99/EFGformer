@@ -300,17 +300,17 @@ class fftformer(nn.Module):
         self.down1_2 = Downsample(dim)
         self.encoder_level2 = nn.Sequential(*[
             TransformerBlock(dim=int(dim * 2 ** 1), ffn_expansion_factor=ffn_expansion_factor, bias=bias,
-                             scale=scale[1]) for i in range(num_blocks[1])])
+                             scale=scale[1], att=True) for i in range(num_blocks[1])])
 
         self.down2_3 = Downsample(int(dim * 2 ** 1))
         self.encoder_level3 = nn.Sequential(*[
             TransformerBlock(dim=int(dim * 2 ** 2), ffn_expansion_factor=ffn_expansion_factor, bias=bias,
-                             scale=scale[2]) for i in range(num_blocks[2])])
+                             scale=scale[2], att=True) for i in range(num_blocks[2])])
 
         self.down3_4 = Downsample(int(dim * 2 ** 2))
         self.encoder_level4 = nn.Sequential(*[
             TransformerBlock(dim=int(dim * 2 ** 3), ffn_expansion_factor=ffn_expansion_factor, bias=bias,
-                             scale=scale[3]) for i in range(num_blocks[3])])
+                             scale=scale[3], att=True) for i in range(num_blocks[3])])
         self.up4_3 = Upsample(int(dim * 2 ** 3))
 
         self.decoder_level3 = nn.Sequential(*[
